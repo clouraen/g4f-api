@@ -11,7 +11,7 @@ from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import StreamingResponse
 from fp.fp import FreeProxy
 from g4f import ChatCompletion
-from g4f.Provider import Phind
+from g4f.Provider import Bing
 from loguru import logger
 from starlette.middleware.cors import CORSMiddleware
 
@@ -140,7 +140,7 @@ async def gen_resp(max_tokens, messages, model, stream, temperature, top_p):
                 top_p=top_p,
                 max_tokens=max_tokens,
                 system_prompt="",
-                provider=Phind,
+                provider=Bing,
                 proxy=get_proxy(is_working),
             )
             return response
