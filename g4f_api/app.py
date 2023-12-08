@@ -141,7 +141,7 @@ async def gen_resp(max_tokens, messages, model, stream, temperature, top_p):
                 max_tokens=max_tokens,
                 system_prompt="",
                 provider=Bing,
-                proxy=get_proxy(is_working),
+                #proxy=get_proxy(is_working),
             )
             return response
         except Exception as e:
